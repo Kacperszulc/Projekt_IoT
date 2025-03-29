@@ -1,5 +1,5 @@
-# Projekt_IoT
-Aplikacja do inteligentnego podlewania ogrodu przy użyciu wody deszczowej
+# Projekt_IoT 
+Aplikacja do inteligentnego nawadniania ogrodu zintegrowana ze zbiornikiem wody deszczowej
 
 **1. Opis Projektu**
 
