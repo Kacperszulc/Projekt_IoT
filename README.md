@@ -3,7 +3,7 @@ Aplikacja do inteligentnego nawadniania ogrodu zintegrowana ze zbiornikiem wody 
 
 **1. Opis Projektu**
 
-System monitoruje poziom wody w zbiorniku na deszczówkę oraz wilgotność gleby za pomocą symulowanych czujników. Na podstawie tych danych automatycznie uruchamia podlewanie, jeśli gleba jest sucha, a w zbiorniku znajduje się wystarczająca ilość wody. Użytkownik ma podgląd na wilgotność gleby oraz na poziom wody w zbiorniku. Dodatkowo użytkownik ma możliwość ręcznego napełnienia zbiornika wodą z kanalizacji, gdy poziom wody jest niski.
+System monitoruje poziom wody w zbiorniku na deszczówkę oraz wilgotność gleby za pomocą symulowanych czujników. Na podstawie tych danych automatycznie uruchamia podlewanie, jeśli gleba jest sucha, a w zbiorniku znajduje się wystarczająca ilość wody. Użytkownik ma podgląd na wilgotność gleby oraz na poziom wody w zbiorniku. 
 
 **2. User Stories**
 
