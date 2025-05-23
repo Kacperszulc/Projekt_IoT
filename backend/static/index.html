@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel Nawadniania</title>
+  <link rel="stylesheet" href="/static/styles.css"/>
+</head>
+<body>
+  <div class="panel">
+    <h1>🌱 Panel Nawadniania</h1>
+    <p>Wilgotność gleby: <span id="moisture">--</span>%</p>
+    <p>Poziom wody w zbiorniku: <span id="tank">--</span>%</p>
+    <p>Status pompy: <span id="watering">--</span></p>
+    <button id="manualBtn">Podlej ręcznie</button>
+  </div>
+
+  <script>
+    async function fetchData() {
+      try {
+        const res = await fetch('/latest');
+        if (!res.ok) throw new Error("Brak danych");
+        const data = await res.json();
+        document.getElementById('moisture').textContent = data.soilMoisture;
+        document.getElementById('tank').textContent = data.tankLevel;
+        document.getElementById('watering').textContent = data.watering ? "Włączona" : "Wyłączona";
+      } catch (err) {
+        console.log("Błąd:", err);
+      }
+    }
+
+    async function manualWatering() {
+      await fetch('/manual-watering', { method: 'POST' });
+      await fetchData(); // odśwież dane po ręcznym podlaniu
+    }
+
+    document.getElementById("manualBtn").addEventListener("click", manualWatering);
+
+    // Odświeżanie co 5 sek.
+    fetchData();
+    setInterval(fetchData, 5000);
+  </script>
+</body>
+</html>

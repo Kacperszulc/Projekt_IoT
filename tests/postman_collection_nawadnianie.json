@@ -1,0 +1,76 @@
+{
+  "info": {
+    "name": "Inteligentne Nawadnianie API",
+    "_postman_id": "c4d9a8f7-6b42-4a30-bc68-dae378cba41e",
+    "description": "Kolekcja do testowania API projektu IoT Nawadniania",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "POST /telemetry",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"soilMoisture\": 40,\n  \"tankLevel\": 75\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/telemetry",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "telemetry"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /manual-watering",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/manual-watering",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "manual-watering"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /latest",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/latest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "latest"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
