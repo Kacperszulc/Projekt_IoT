@@ -41,11 +41,3 @@ aby podlewać rośliny niezależnie od automatycznych decyzji systemu.
 4. Użytkownik może ręcznie włączyć podlewanie przyciskiem. Informacja ta również trafia do Storage.
 
 ---
-
-## 🔧 Uruchomienie lokalne
-
-1. Utwórz plik `.env` z wymaganymi zmiennymi:
-   ```env
-   AZURE_IOTHUB_EVENT_HUB_CONN_STRING=...
-   AZURE_IOTHUB_CONSUMER_GROUP=$Default
-   AZURE_TABLE_CONN_STRING=...
